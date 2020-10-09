@@ -12,6 +12,7 @@ export class SearchPipe implements PipeTransform {
     }
     return movie.filter((movie) => {
       movie.title.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+      
     })
 
   }
