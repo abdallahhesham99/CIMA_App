@@ -7,6 +7,9 @@ $fontColor: white;
 $secFontColor: #949cb0;
 $borderColor: #a8a8a83d;
 
+.cust-img {
+    height: 240px !important;
+}
 .genres {
     background: $bgGradient;
 }
@@ -28,6 +31,7 @@ body {
     background-color: $bgColor;
     color: $fontColor;
 }
+
 button {
     color: $fontColor;
     font-weight: 500;
@@ -145,5 +149,29 @@ nav {
     }
     .h6 {
         font-size: 0.8rem;
+    }
+}
+// ===================================
+ul.wanted {
+    margin: 0px;
+
+    @media screen and (max-width: 990px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+    }
+    a {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.1rem;
+        @media screen and (max-width: 760px) {
+            font-weight: 600;
+            font-size: 0.7rem;
+        }
+
+        &:hover {
+            @extend .colorGradient;
+        }
     }
 }

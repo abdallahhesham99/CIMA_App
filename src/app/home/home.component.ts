@@ -15,23 +15,22 @@ export class HomeComponent implements OnInit {
   trendingPeople: any[];
   imgPrefix: string = "https://image.tmdb.org/t/p/w500/";
 
-  term: string;
 
 
   constructor(private _MoviesService: MoviesService) {
-    _MoviesService.getTrending('movies').subscribe((data) => {
+    _MoviesService.getTrending('movie', 'week').subscribe((data) => {
 
       data.results.sort((a, b) => parseFloat(a.vote_average) - parseFloat(b.vote_average));
       this.trendingMovies = data.results.reverse().slice(0, 10);
     });
 
-    _MoviesService.getTrending('tv').subscribe((data) => {
+    _MoviesService.getTrending('tv', 'week').subscribe((data) => {
 
       data.results.sort((a, b) => parseFloat(a.vote_average) - parseFloat(b.vote_average));
       this.trendingTv = data.results.reverse().slice(0, 10);
     });
 
-    _MoviesService.getTrending('person').subscribe((data) => {
+    _MoviesService.getTrending('person', 'week').subscribe((data) => {
 
       data.results.sort((a, b) => parseFloat(a.popularity) - parseFloat(b.popularity));
       this.trendingPeople = data.results.reverse().slice(0, 11);

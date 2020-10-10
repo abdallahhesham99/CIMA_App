@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class WatchsPipe implements PipeTransform {
 
   transform(desc: string, limit: number): any {
-    return desc.substring(0, limit);
+    // return desc.substring(0, 800);
   }
 
 }

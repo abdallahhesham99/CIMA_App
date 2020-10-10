@@ -48,6 +48,8 @@ export class LoginComponent implements OnInit {
       'password': new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z]/)])
     });
 
+
+   
   }
 
 }

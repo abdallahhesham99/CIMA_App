@@ -16,6 +16,7 @@ export class MovieDetailsComponent implements OnInit {
   movieDetails: any;
   isPerson: boolean = false;
 
+  personWorks: any[];
 
   imgPrefix: string = "https://image.tmdb.org/t/p/w500/";
 
@@ -28,6 +29,7 @@ export class MovieDetailsComponent implements OnInit {
 
       this.movieDetails = data;
     })
+
 
     if (this.type == 'person') {
       this.isPerson = true;

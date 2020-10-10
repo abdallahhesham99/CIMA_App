@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { AuthService } from '../auth.service';
+declare var $: any;
 
 @Component({
   selector: 'app-navbar',
@@ -29,6 +30,8 @@ export class NavbarComponent implements OnInit {
     this._AuthService.logout();
   }
   ngOnInit(): void {
+
+
   }
 
 }

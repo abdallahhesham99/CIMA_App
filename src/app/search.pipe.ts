@@ -12,6 +12,7 @@ export class SearchPipe implements PipeTransform {
       return movie;
     }
     return movie.filter((movie) => {
+      
       console.log(movie);
 
       if (movie && movie.title) {
