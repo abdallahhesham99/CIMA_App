@@ -9,6 +9,7 @@ import { MoviesService } from '../movies.service';
 export class PeopleComponent implements OnInit {
   trendingPeople: any[];
 
+
   imgPrefix: string = "https://image.tmdb.org/t/p/w500/";
 
   term: string;
@@ -17,6 +18,7 @@ export class PeopleComponent implements OnInit {
 
       this.trendingPeople = data.results;
     })
+  
   }
   getWantedList(mediaType) {
     this._MoviesService.getAll('person', mediaType).subscribe((data) => {

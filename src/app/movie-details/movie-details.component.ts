@@ -28,9 +28,8 @@ export class MovieDetailsComponent implements OnInit {
     _MoviesService.getItemDetails(this.type, this.id).subscribe((data) => {
 
       this.movieDetails = data;
-    })
-
-
+    });
+   
     if (this.type == 'person') {
       this.isPerson = true;
     }

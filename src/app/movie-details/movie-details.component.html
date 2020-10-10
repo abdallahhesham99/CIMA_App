@@ -41,24 +41,6 @@
 
         <h3 class="my-2 h6">Biography :</h3>
 
-        <p class=" mt-2 h6 p-color">{{movieDetails?.biography}}</p>
-        <div *ngFor="let movie of trendingPeople" class="col-lg-3 col-md-4  col-6 mb-4  mt-2">
-            <div [routerLink]="['/movieDetails', 'movie' , movie.id]" class="movie">
-
-                <img [src]="imgPrefix+person.profile_path" class="img-fluid" alt="">
-                <div class="overlay d-flex justify-content-center align-items-center">
-                    <a [routerLink]="['/movieDetails' , 'movie' , movie.id]"><button class="">Watch
-                            Now</button></a>
-                </div>
-                <div class="movie-title">
-                    <span class="h6 text-white m-0">{{movie.title}}{{movie.name}}</span>
-                </div>
-                <div class="movie-rating">
-                    <span>
-                        <i class="fas fa-star px-2"></i>{{movie.vote_average}}
-                    </span>
-                </div>
-            </div>
-        </div>
+        <p class=" mt-2 h6 cust p-color">{{movieDetails?.biography}}</p>
     </div>
 </div>
