@@ -5,6 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchPipe implements PipeTransform {
 
+  
   transform(movie: any[], term: string): any {
 
     if (!movie || !term) {
