@@ -11,8 +11,24 @@ export class SearchPipe implements PipeTransform {
       return movie;
     }
     return movie.filter((movie) => {
-      movie.title.toLowerCase().indexOf(term.toLowerCase()) !== -1;
-      
+      console.log(movie);
+
+      if (movie && movie.title) {
+
+        return movie.title.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+
+      }
+      // if (movie && movie.name) {
+
+      //   return movie.name.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+
+      // }
+      // if (movie && movie.original_name) {
+
+      //   return movie.original_name.toLowerCase().indexOf(term.toLowerCase()) !== -1;
+
+      // }
+
     })
 
   }

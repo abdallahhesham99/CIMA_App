@@ -9,20 +9,33 @@ import { MoviesService } from '../movies.service'
 })
 export class MoviesComponent implements OnInit {
 
-  allMovies: any[];
+  popular: any[];
 
+  topRated: any[];
+
+  nowPlaying: any[];
+
+  imgPrefix: string = "https://image.tmdb.org/t/p/w500/";
 
   constructor(private _MoviesService: MoviesService) {
 
-  }
-  getAllMovies(mediaType, x) {
+    _MoviesService.getAll('movie', 'popular').subscribe((data) => {
 
-
-    this._MoviesService.getAll(mediaType, x).subscribe((data) => {
-
-      this.allMovies = data.results;
+      this.popular = data.results.slice(0, 10);
     })
+
+    _MoviesService.getAll('movie', 'top_rated').subscribe((data) => {
+
+      this.topRated = data.results.slice(0, 10);
+    })
+
+    _MoviesService.getAll('movie', 'now_playing').subscribe((data) => {
+
+      this.nowPlaying = data.results.slice(0, 10);
+    })
+
   }
+
 
   ngOnInit(): void {
   }

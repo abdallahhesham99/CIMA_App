@@ -46,7 +46,7 @@
         <div class="brdr w-100"></div>
 
     </div>
-    <div *ngFor="let tvshow of trendingTv" class="col-lg-2 col-md-4  col-6  mb-4  mt-2">
+    <div *ngFor="let tvshow of trendingTv | search:term" class="col-lg-2 col-md-4  col-6  mb-4  mt-2">
         <div [routerLink]="['/movieDetails', tvshow.media_type, tvshow.id]" class="movie">
 
             <img [src]="imgPrefix+tvshow.poster_path" class="img-fluid " alt="">
@@ -76,7 +76,7 @@
 
     </div>
 
-    <div *ngFor="let person of trendingPeople" class="col-lg-3 col-md-4 col-6 mb-4 mt-2">
+    <div *ngFor="let person of trendingPeople | search:term" class="col-lg-3 col-md-4 col-6 mb-4 mt-2">
         <div [routerLink]="['/movieDetails', person.media_type , person.id]" class="movie">
 
             <img [src]="imgPrefix+person.profile_path" class="img-fluid" alt="">

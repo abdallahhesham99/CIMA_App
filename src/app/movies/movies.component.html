@@ -1,12 +1,31 @@
-<div class="row">
-    <div class="col-md-3">
-        <ul class="list-unstyled">
-            <li> <button (click)="getAllMovies('movie','now_playing')" class="my-2 btn btn-info">Now Playing</button>
-            </li>
-            <li> <button (click)="getAllMovies('movie','top_rated')" class="my-2 btn btn-info">Top Rated</button></li>
-        </ul>
+<div class="row my-5">
+    <div class="col-lg-4">
+        <div class="brdr w-25"></div>
+        <h2 class="py-2">Trending <br>movies <br> to watch now</h2>
+        <p class="p-color">Most watched movies by week</p>
+        <div class="brdr w-100"></div>
+
     </div>
-    <div *ngFor="let movie of allMovies" class=" col-md-3">
-        <h2 class="my-2 mx-2">{{movie.title}}</h2>
+
+    <div *ngFor="let movie of popular" class="col-lg-2 col-md-4  col-6 mb-4  mt-2">
+        <div [routerLink]="['/movieDetails' , movie.media_type , movie.id]" class="movie">
+
+            <img [src]="imgPrefix+movie.poster_path" class="img-fluid " alt="">
+            <div class="overlay d-flex justify-content-center align-items-center">
+                <a [routerLink]="['/movieDetails' , movie.media_type , movie.id]"><button class="">Watch
+                        Now</button></a>
+            </div>
+            <div class="movie-title">
+                <span class="h6 text-white m-0">{{movie.title}}{{movie.name}}</span>
+            </div>
+
+            <div class="movie-rating">
+                <span>
+                    <i class="fas fa-star px-2"></i>{{movie.vote_average}}
+                </span>
+            </div>
+
+
+        </div>
     </div>
 </div>
