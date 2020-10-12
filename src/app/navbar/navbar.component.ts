@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   isLogin: boolean = false;
   userName: string;
-  constructor(private _AuthService: AuthService,) {
+  constructor(private _AuthService: AuthService) {
 
     _AuthService.currentUser.subscribe((data) => {
       this.userName = JSON.parse(localStorage.getItem('userName'));
