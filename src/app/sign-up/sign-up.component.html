@@ -36,7 +36,7 @@
         <input formControlName='password'
             [class.is-valid]="signUpForm.get('password').errors == null && signUpForm.get('password').touched"
             [class.is-invalid]="signUpForm.get('password').errors != null && signUpForm.get('password').touched"
-            class="form-control" type="password" placeholder="********">
+            class="form-control" type="password" placeholder="********(First letter must be capital)">
 
         <p *ngIf="signUpForm.get('password').errors != null && signUpForm.get('password').touched"
             class="py-2 text-danger">Password is invalid</p>

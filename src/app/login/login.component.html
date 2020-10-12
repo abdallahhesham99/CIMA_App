@@ -15,7 +15,8 @@
 
         <input [class.is-valid]='loginForm.get("password").errors == null && loginForm.get("password").touched'
             [class.is-invalid]='loginForm.get("password").errors != null && loginForm.get("password").touched'
-            formControlName='password' class="form-control" type="password" placeholder="********">
+            formControlName='password' class="form-control" type="password"
+            placeholder="********(First letter must be capital)">
         <p *ngIf="loginForm.get('password').errors != null && loginForm.get('password').touched"
             class="py-2 text-danger">
             Password is invalid</p>
