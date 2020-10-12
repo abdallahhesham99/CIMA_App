@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   constructor(private _AuthService: AuthService,) {
 
     _AuthService.currentUser.subscribe((data) => {
+      this.userName = JSON.parse(localStorage.getItem('userName'));
 
       if (data != null) {
 
@@ -24,7 +25,6 @@ export class NavbarComponent implements OnInit {
       }
     })
 
-    this.userName = JSON.parse(localStorage.getItem('userName'));
 
   }
 
