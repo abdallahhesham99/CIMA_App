@@ -39,6 +39,7 @@ export class AuthService {
   saveCurrentUser(first_name, last_name, email, token) {
     let user = new userData(first_name, last_name, email, token);
     localStorage.setItem('userData', JSON.stringify(user));
+    localStorage.setItem('userName', JSON.stringify(`${first_name} ${last_name}`));
     this.currentUser.next(user);
 
 

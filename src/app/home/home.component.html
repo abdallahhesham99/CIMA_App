@@ -10,7 +10,7 @@
     <div *ngFor="let movie of trendingMovies" class="col-lg-2 col-md-4  col-6 mb-4  mt-2">
         <div [routerLink]="['/movieDetails' , movie.media_type , movie.id]" class="movie">
 
-            <img [src]="imgPrefix+movie.poster_path" class="img-fluid cust-img" alt="">
+            <img [src]="imgPrefix+movie.poster_path" class="img-fluid" alt="">
             <div class="overlay d-flex justify-content-center align-items-center">
                 <a [routerLink]="['/movieDetails' , movie.media_type , movie.id]"><button class="">Watch
                         Now</button></a>

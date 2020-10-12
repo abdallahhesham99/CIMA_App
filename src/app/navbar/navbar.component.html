@@ -21,16 +21,8 @@
             </li>
 
         </ul>
-
-        <div class="social-icons text-white">
-            <i class="mx-2 fab fa-facebook-square"></i>
-            <i class="mx-2  fab fa-instagram"></i>
-            <i class="mx-2  fab fa-twitter"></i>
-            <i class="mx-2  fab fa-youtube"></i>
-        </div>
-
-
         <div class="btns-left">
+
             <a *ngIf='!isLogin' routerLink="sign-up">
                 <button class="mx-2">Sign up</button>
             </a>
@@ -38,8 +30,9 @@
                 <button class="mx-2">Login</button>
             </a>
 
+            <a *ngIf='isLogin' class="text-white font-weight-bold text-decoration-none">{{userName}}</a>
             <a *ngIf='isLogin'>
-                <button (click)='logout()' class="mx-2">Logout</button>
+                <button (click)='logout()' class="mx-2">Logout <i class="fas fa-sign-out-alt"></i></button>
             </a>
 
         </div>

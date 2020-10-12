@@ -11,5 +11,15 @@
     border-radius: 0.5rem;
 }
 nav {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    
+    padding-bottom: 5px;
+    background: /* gradient can be an image */ linear-gradient(
+            to left,
+            rgba(0, 153, 255, 100) 0%,
+            rgba(0, 204, 153, 100) 40%,
+            rgba(0, 204, 153, 100) 60%,
+            rgba(0, 153, 255, 100) 100%
+        )
+        left bottom #777 no-repeat;
+    background-size: 100% 3px; /* if linear-gradient, we need to resize it */
 }

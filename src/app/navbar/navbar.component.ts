@@ -11,7 +11,7 @@ declare var $: any;
 export class NavbarComponent implements OnInit {
 
   isLogin: boolean = false;
-
+  userName: string;
   constructor(private _AuthService: AuthService,) {
 
     _AuthService.currentUser.subscribe((data) => {
@@ -24,13 +24,14 @@ export class NavbarComponent implements OnInit {
       }
     })
 
+    this.userName = JSON.parse(localStorage.getItem('userName'));
+
   }
 
   logout() {
     this._AuthService.logout();
   }
   ngOnInit(): void {
-
 
   }
 

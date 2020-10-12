@@ -29,7 +29,7 @@ export class MovieDetailsComponent implements OnInit {
 
       this.movieDetails = data;
     });
-   
+
     if (this.type == 'person') {
       this.isPerson = true;
     }

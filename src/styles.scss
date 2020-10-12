@@ -2,14 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $bgColor: #131722;
-$bgGradient: linear-gradient(90deg, #0c9 0, #09f);
+$bgGradient: linear-gradient(90deg, #0c9, #09f);
 $fontColor: white;
 $secFontColor: #949cb0;
 $borderColor: #a8a8a83d;
 
-.cust-img {
-    height: 240px !important;
-}
 .genres {
     background: $bgGradient;
 }
@@ -77,6 +74,9 @@ nav {
             // border-radius: 8px;
             background: $bgGradient;
             padding: 9px 13px;
+            &:hover {
+                background: #0c9;
+            }
         }
     }
 }
@@ -160,18 +160,28 @@ ul.wanted {
         justify-content: center;
         align-items: center;
         padding: 0 10px;
+        text-align: center;
     }
     a {
         cursor: pointer;
         font-weight: 600;
         font-size: 1.1rem;
-        @media screen and (max-width: 760px) {
-            font-weight: 600;
-            font-size: 0.7rem;
-        }
+        // @media screen and (max-width: 760px) {
+        //     font-weight: 600;
+        //     font-size: 0rem;
+        // }
 
         &:hover {
             @extend .colorGradient;
+        }
+    }
+}
+.social-icons {
+    font-size: 1.5rem;
+    i {
+        transition: all 500ms;
+        &:hover {
+            color: #09f;
         }
     }
 }

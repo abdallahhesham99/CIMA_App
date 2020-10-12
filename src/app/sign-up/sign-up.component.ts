@@ -30,7 +30,7 @@ export class SignUpComponent implements OnInit {
           this._Router.navigate(['/login']);
 
         } else {
-          
+
           this.flag = true;
         }
       })
