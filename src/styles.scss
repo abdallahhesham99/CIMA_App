@@ -37,6 +37,9 @@ button {
     font-size: 1.1rem;
     outline: none !important;
     border: none;
+    &:hover {
+        background: #0c9;
+    }
 }
 
 button:disabled {

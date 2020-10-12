@@ -16,7 +16,7 @@
         <input [class.is-valid]='loginForm.get("password").errors == null && loginForm.get("password").touched'
             [class.is-invalid]='loginForm.get("password").errors != null && loginForm.get("password").touched'
             formControlName='password' class="form-control" type="password"
-            placeholder="********(First letter must be capital)">
+            placeholder="**(First letter must be capital)">
         <p *ngIf="loginForm.get('password').errors != null && loginForm.get('password').touched"
             class="py-2 text-danger">
             Password is invalid</p>
@@ -27,6 +27,10 @@
     </div>
 
     <div class="text-center mt-3">
-        <h5>if you did not have an accout <a routerLink="/sign-up" class="colorGradient">Sign up</a> </h5>
+        <h5>if you did not have an account
+            <a routerLink="/sign-up" class="colorGradient text-decoration">Sign
+                up
+            </a>
+        </h5>
     </div>
 </form>
